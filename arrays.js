@@ -97,6 +97,22 @@ const dogs4 = dogs.sort((lhs, rhs) => {
 });
 console.log(dogs4);
 
+const dogs5 = dogs.sort(); // default sorts lexographically
+console.log(dogs5);
 
+console.log('\nSome/Every:');
+const doesExist = dogs.some(dog => {
+    return dog === 'aussie';
+    // 9 == '9' -> returns true
+    // 9 === '9' -> returns false
+});
+console.log(doesExist);
+const doesExist2 = dogs.some(dog => {
+    return dog.length > 3;
+});
+console.log(doesExist2);
+
+const allExist = dogs.every(dog => (dog.length > 5) );
+console.log(allExist);
 
 
