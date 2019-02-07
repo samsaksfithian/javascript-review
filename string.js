@@ -32,8 +32,21 @@ console.log(color2);
 const color3 = puppy.substr(7, 5); // starts at a point and does a length, instead of start and end
 console.log(color3);
 
-const words = puppy.split(' ');
+const words = puppy.split(' '); // [ 'golden', 'retriever' ]
 console.log(words);
 
+const [one, two, three] = [ 'golden', 'retriever' ]
+console.log(one, "and", two, "and", three);
 
+const words2 = puppy.split('e'); // [ 'gold', 'n r', 'tri', 'v', 'r' ]
+const newpuppy = words.join('e');// 'gold' + "e" + 'n r' + "e" + 'tri' + "e" + 'v' + "e" + 'r' ]
+console.log(words2);
+console.log(newpuppy);
+
+const puppy2 = 'golden    retriever   is      cool';
+const words3 = puppy2.split(/ +/);
+const newpuppy2 = words3.join(' ');
+console.log('\n', puppy2);
+console.log(words3);
+console.log(newpuppy2);
 
