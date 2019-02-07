@@ -1,11 +1,11 @@
 /*
-    template strings
-    
-    length
-    indexOf
-    replace
-    substring
-    subst
+	template strings
+	
+	length
+	indexOf
+	replace
+	substring
+	subst
 */
 
 const puppy = "golden retriever";
