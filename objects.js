@@ -36,6 +36,8 @@ const puppy2 = {
 puppy2.bark();
 console.log(puppy2);
 
+// ===========================================
+// For In
 console.log('\nFor In:');
 for (const key in puppy2) {
 	if (puppy2.hasOwnProperty(key)) {
@@ -44,11 +46,15 @@ for (const key in puppy2) {
 	}
 }
 
+// ===========================================
+// Destructuring
 console.log('\nDestructuring:');
 const { name, owner } = puppy2;
 console.log(name);
 console.log(owner.occupation);
 
+// ===========================================
+// Constructors
 console.log('\nConstructors:');
 function Puppy(name, age, breed = 'Dog') {
 	this.name = name;
@@ -63,6 +69,8 @@ console.log(jeff.name, frankie.name, buddy.name, lucy.name);
 console.log(jeff);
 console.log(lucy);
 
+// ===========================================
+// Prototypes/Altering Constructors
 console.log('\nPrototypes/Altering Constructors:');
 Puppy.prototype.height = 3;
 jeff.height = 5;
@@ -70,6 +78,8 @@ console.log(jeff.height, frankie.height);
 console.log(jeff);
 console.log(frankie);
 
+// ===========================================
+// Class
 console.log('\nClass:');
 class PuppyClass {
 	constructor(name, age, breed) {

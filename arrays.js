@@ -20,6 +20,9 @@
 const dogs = ['yorkshire', 'golden retriever', 'husky', 'aussie', 'german shepherd', 'Snoop', 'frenchie', 'pitbull'];
 console.log(dogs);
 
+// ===========================================
+// Pop/Push
+
 console.log('\nPop:');
 console.log(dogs.pop());
 console.log(dogs);
@@ -28,20 +31,29 @@ console.log('\nPush:');
 console.log(dogs.push('maltese'));
 console.log(dogs);
 
+// ===========================================
+// Shift/Unshift
+
 console.log('\nShift/Unshift');
 console.log(dogs.shift());
 console.log(dogs.unshift('chow chow'));
 
+// ===========================================
+// Splice
 console.log('\nSplice:');
 const dogs3 = ['yorkshire', 'golden retriever', 'husky', 'aussie', 'german shepherd', 'Snoop', 'frenchie', 'pitbull'];;
 console.log(dogs3.splice(2, 3));
 console.log(dogs3);
 
+// ===========================================
+// ForEach
 console.log('\nForEach:');
 dogs.forEach(dog => {
 	console.log(dog);
 });
 
+// ===========================================
+// Filter
 console.log('\nFilter:');
 const dogs2 = dogs.filter((dog) => {
 	// return dog.length > 6; // long names
@@ -49,18 +61,24 @@ const dogs2 = dogs.filter((dog) => {
 });
 console.log(dogs2);
 
+// ===========================================
+// Map
 console.log('\nMap:');
 const modifiedDogs = dogs.map(dog => {
 	return dog.toUpperCase()
 });
 console.log(modifiedDogs);
 
+// ===========================================
+// Combine
 console.log('\nCombine:');
 const modifiedDogs2 = dogs
 						.filter( (dog) => dog.indexOf(' ') != -1 )
 						.map( dog => dog.toUpperCase() );
 console.log(modifiedDogs2);
 
+// ===========================================
+// Reduce
 console.log('\nReduce:');
 const modifiedDogs3 = dogs.reduce( (accum, dog) => {
 	return accum + dog.length;
@@ -76,7 +94,8 @@ const modifiedDogs4 = dogs.reduce( (accum, dog) => {
 }, '');
 console.log(modifiedDogs4);
 
-
+// ===========================================
+// Spread
 console.log('\nSpread:');
 const moreDogs = [...dogs, 'collie'];
 console.log(moreDogs);
@@ -91,6 +110,8 @@ const modifiedDogs5 = dogs.reduce( (accum, dog) => {
 }, []);
 console.log(modifiedDogs5);
 
+// ===========================================
+// Sort
 console.log('\nSort:');
 const dogs4 = dogs.sort((lhs, rhs) => {
 	return lhs.length < rhs.length ? -1 : 1;
@@ -100,6 +121,8 @@ console.log(dogs4);
 const dogs5 = dogs.sort(); // default sorts lexographically
 console.log(dogs5);
 
+// ===========================================
+// Some/Every
 console.log('\nSome/Every:');
 const doesExist = dogs.some(dog => {
 	return dog === 'aussie';
