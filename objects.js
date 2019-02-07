@@ -49,6 +49,41 @@ const { name, owner } = puppy2;
 console.log(name);
 console.log(owner.occupation);
 
+console.log('\nConstructors:');
+function Puppy(name, age, breed = 'Dog') {
+	this.name = name;
+	this.age = age;
+	this.breed = breed;
+}
+const jeff = new Puppy('Jeff', 5, 'Labrador');
+const frankie = new Puppy('Frankie', 3, 'Golden Retriever');
+const buddy = new Puppy('Buddy', 10, 'German Shepherd');
+const lucy = new Puppy('Lucy', 4);
+console.log(jeff.name, frankie.name, buddy.name, lucy.name);
+console.log(jeff);
+console.log(lucy);
 
+console.log('\nPrototypes/Altering Constructors:');
+Puppy.prototype.height = 3;
+jeff.height = 5;
+console.log(jeff.height, frankie.height);
+console.log(jeff);
+console.log(frankie);
 
+console.log('\nClass:');
+class PuppyClass {
+	constructor(name, age, breed) {
+		this.name = name;
+		this.age = age;
+		this.breed = breed;
+	}
+
+	bark() {
+		console.log(`${this.name} says 'woof'!`);
+	}
+}
+
+const geraldine = new PuppyClass('Geraldine', 6, 'Yorkshire');
+console.log(geraldine.name);
+console.log(geraldine);
 
